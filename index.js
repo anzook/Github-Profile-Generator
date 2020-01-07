@@ -31,15 +31,19 @@ async function init() {
 
       client.get(githubUser, {}, function (err, status, body, headers) {
         console.log(body); //json object
-      });
+        buildReprt(body);
+            });
 
     } catch(err) {
       console.log(err);
     }
   }
   
-// init();
+init();
 
+function buildReprt(body) {
+  
+}
 
 
 // The user will be prompted for a favorite color, which will be used as the background color for cards.
