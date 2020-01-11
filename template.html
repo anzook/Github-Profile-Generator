@@ -1,43 +1,4 @@
-var fs = require('fs');
-
-//options to edit .html file
-//template render tool - ex {{x}}  
-
-const colors = {
-    green: {
-      wrapperBackground: "#E6E1C3",
-      headerBackground: "#C1C72C",
-      headerColor: "black",
-      photoBorderColor: "#black"
-    },
-    blue: {
-      wrapperBackground: "#5F64D3",
-      headerBackground: "#26175A",
-      headerColor: "white",
-      photoBorderColor: "#73448C"
-    },
-    pink: {
-      wrapperBackground: "#879CDF",
-      headerBackground: "#FF8374",
-      headerColor: "white",
-      photoBorderColor: "#FEE24C"
-    },
-    red: {
-      wrapperBackground: "#DE9967",
-      headerBackground: "#870603",
-      headerColor: "white",
-      photoBorderColor: "white"
-    }
-  };
-
-
-
-  
-  function generateHTML(data, color) {
-    let user = data.login;
-    console.log("User define color: ", color);
-    let html = 
-    `<!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
      <head>
         <meta charset="UTF-8" />
@@ -63,7 +24,7 @@ const colors = {
            height: 100%;
            }
            .wrapper {
-           background-color: ${colors[color].wrapperBackground};
+           background-color: ${colors[data.color].wrapperBackground};
            padding-top: 100px;
            }
            body {
@@ -105,8 +66,8 @@ const colors = {
            display: flex;
            justify-content: center;
            flex-wrap: wrap;
-           background-color: ${colors[color].headerBackground};
-           color: ${colors[color].headerColor};
+           background-color: ${colors[data.color].headerBackground};
+           color: ${colors[data.color].headerColor};
            padding: 10px;
            width: 95%;
            border-radius: 6px;
@@ -117,7 +78,7 @@ const colors = {
            border-radius: 50%;
            object-fit: cover;
            margin-top: -75px;
-           border: 6px solid ${colors[color].photoBorderColor};
+           border: 6px solid ${colors[data.color].photoBorderColor};
            box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
            }
            .photo-header h1, .photo-header h2 {
@@ -160,8 +121,8 @@ const colors = {
            .card {
              padding: 20px;
              border-radius: 6px;
-             background-color: ${colors[color].headerBackground};
-             color: ${colors[color].headerColor};
+             background-color: ${colors[data.color].headerBackground};
+             color: ${colors[data.color].headerColor};
              margin: 20px;
            }
            
@@ -183,15 +144,5 @@ const colors = {
            }
         </style>
         <body>
-        <h1> ${user} </h1>
-        </body>`;
-
-        return html;
-          }
-  
-
-module.exports = {
-  colors: colors,
-  generateHTML: generateHTML
-
-}
+        
+        </body>

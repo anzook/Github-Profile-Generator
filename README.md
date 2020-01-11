@@ -20,8 +20,6 @@ Pages include:
 Please contact me with ways to improve, fix, or simply neat ideas to improve the site. If you wish to use this format, it can be easily updated and maintained by updating the portfolio.js file.
 
 ## Acknowledgements and Credits
-Framework is Material Design Lite (mdl) : https://getmdl.io/
-Background from subtlepatterns : https://www.toptal.com/designers/subtlepatterns/rocky-wall/
 
 Website created as an assignment for the Johns Hopkins full-stack web development bootcamp (in partnership with Trilogy Education Services).
 Guidance and assistance provided by:
