@@ -41,7 +41,7 @@ const colors = {
   red: {
     wrapperBackground: "#DE9967",
     headerBackground: "#870603",
-    headerColor: "white",
+    headerColor: "black",
     photoBorderColor: "white"
   }
 };
@@ -149,6 +149,11 @@ async function init() {
     client.get(githubUser, {}, function (err, status, body) {
       console.log("Getting user info ...", status);
       let data = body;
+      let update = data.updated_at
+      let date = new Date();
+      let formatted_date = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear()
+      data.date = formatted_date;
+      data.update = update.slice(0, update.indexOf("T"));
       client.get(githubRepos, {}, function (err, status, body) {
         console.log("Getting repo info...", status);
         data.stars = getStars(body);

@@ -39,20 +39,22 @@
 
     <style>
       body {
-        background-color: #879CDF;
+        background-color: #DE9967;
       }
       .header-style, .card-header {
-        background-color: #FF8374;
-        color: white;
+        background-color: #870603;
+        color: black;
+        padding: 10px;
+        border-radius: calc(.25rem - 1px) calc(.25rem - 1px);
       }
       .bio-style {
-        background-color: #FEE24C;
+        background-color: white;
+        color: black;
       }
       .img-thumbnail {
-        border-color: #FEE24C;
-        padding: 5
-        px;
-        margin: 15px;
+        border-color: white;
+        padding: 7px;
+        margin-right: 20px;
       }
      
       /* target values:
@@ -84,25 +86,26 @@
           Alex Zook's Github Profile
         </span>
       </div>
-      <div class="row">
-          <hr />
-      </div>
+      <hr />
       <div class="jumbotron bio-style">
         <img src="https://avatars0.githubusercontent.com/u/56008225?v&#x3D;4" class="mh-100 d-inline-block img-thumbnail float-left" style="width: 260px; height: 260px;" alt="anzook's Github avatar">
         <h1 class="display-4">Alex Zook</h1>
         <h3 class="lead"> -   Learning more by the day...</h3>
         <h3><i class="fab fa-github"></i>
-          <a class="btn btn-secondary btn-lg" href="https://github.com/anzook" role="button">Profile</a>
-          <a class="btn btn-secondary btn-lg" href="alexnzook@gmail.com" role="button"> Blog </a>
+          <a class="btn btn-secondary btn-lg" href="https://github.com/anzook" target="_blank" role="button">Profile</a>
+          <i class="fas fa-blog"></i>
+          <a class="btn btn-secondary btn-lg" href="alexnzook@gmail.com" target="_blank" role="button"> Blog </a>
         </h3>
-      
-        <a class="btn btn-primary btn-lg" href="https://www.google.com/maps/search/?api=1&query=Baltimore, MD" role="button">Baltimore, MD</a>
+        <h3>
+        <i class="fas fa-map-marker-alt"></i>
+        <a class="btn btn-primary btn-lg" href="https://www.google.com/maps/search/?api=1&query=Baltimore, MD" target="_blank" role="button">Baltimore, MD</a>
+        </h3>
       </div>
 
       <div class="row">
         <div class="col-12">
           <div class="card">
-            <div class="card-header bg-secondary text-white h5">
+            <div class="card-header h5 text-white ">
                GitHub Stats
             </div>
             <ul class="list-group list-group-flush">
@@ -116,7 +119,7 @@
               </li>
               <li class="list-group-item"><i class="fas fa-users"></i> 10 Followers</li>
               <li class="list-group-item">
-                <i class="fas fa-history"></i> Updated: 2020-02-08T14:12:02Z
+                <i class="fas fa-history"></i> Updated: 2020-02-08
               </li>
               
             
@@ -124,13 +127,13 @@
           </div>
         </div>
       </div>
-      <hr />
 
       <!-- Footer  -->
       <footer class="footer">
         <div class="text-center">
           <hr />
           <span>
+            9-2-2020
             <a href="https://github.com/anzook" target="_blank"
               ><img
                 id="git-logo"
@@ -138,7 +141,7 @@
                 src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
               />
             </a>
-            ANZ 2020
+              ANZ 2020
           </span>
         </div>
       </footer>

@@ -44,9 +44,12 @@
       .header-style, .card-header {
         background-color: {{headerBackground}};
         color: {{headerColor}};
+        padding: 10px;
+        border-radius: calc(.25rem - 1px) calc(.25rem - 1px);
       }
       .bio-style {
         background-color: {{photoBorderColor}};
+        color: {{headerColor}};
       }
       .img-thumbnail {
         border-color: {{photoBorderColor}};
@@ -83,31 +86,35 @@
           {{name}}'s Github Profile
         </span>
       </div>
-      <div class="row">
-          <hr />
-      </div>
+      <hr />
       <div class="jumbotron bio-style">
         <img src="{{avatar_url}}" class="mh-100 d-inline-block img-thumbnail float-left" style="width: 260px; height: 260px;" alt="{{login}}'s Github avatar">
         <h1 class="display-4">{{name}}</h1>
         <h3 class="lead"> -   {{bio}}</h3>
         <h3><i class="fab fa-github"></i>
-          <a class="btn btn-secondary btn-lg" href="{{html_url}}" role="button">Profile</a>
+          <a class="btn btn-secondary btn-lg" href="{{html_url}}" target="_blank" role="button">Profile</a>
           {{#if email}}
           <i class="fas fa-envelope"></i>
           <a class="btn btn-secondary btn-lg" href="mailto:{{ email }}" role="button">{{ email }}</a>
           {{/if}}
           {{#if blog}}
-          <a class="btn btn-secondary btn-lg" href="{{blog}}" role="button"> Blog </a>
+          <i class="fas fa-blog"></i>
+          <a class="btn btn-secondary btn-lg" href="{{blog}}" target="_blank" role="button"> Blog </a>
           {{/if}}
         </h3>
-      
-        <a class="btn btn-primary btn-lg" href="https://www.google.com/maps/search/?api=1&query={{ location }}" role="button">{{ location }}</a>
+        {{#if location}}
+        <h3>
+        <i class="fas fa-map-marker-alt"></i>
+        <a class="btn btn-primary btn-lg" href="https://www.google.com/maps/search/?api=1&query={{ location }}" target="_blank" role="button">{{ location }}</a>
+        </h3>
+        {{/if}}
+
       </div>
 
       <div class="row">
         <div class="col-12">
           <div class="card">
-            <div class="card-header bg-secondary text-white h5">
+            <div class="card-header h5 text-white ">
                GitHub Stats
             </div>
             <ul class="list-group list-group-flush">
@@ -121,7 +128,7 @@
               </li>
               <li class="list-group-item"><i class="fas fa-users"></i> {{ followers }} Followers</li>
               <li class="list-group-item">
-                <i class="fas fa-history"></i> Updated: {{updated_at}}
+                <i class="fas fa-history"></i> Updated: {{update}}
               </li>
               
             
@@ -135,6 +142,7 @@
         <div class="text-center">
           <hr />
           <span>
+            {{ date }}
             <a href="https://github.com/anzook" target="_blank"
               ><img
                 id="git-logo"
@@ -142,7 +150,7 @@
                 src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
               />
             </a>
-            ANZ 2020
+              ANZ 2020
           </span>
         </div>
       </footer>
