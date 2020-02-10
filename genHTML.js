@@ -4,30 +4,11 @@ var fs = require('fs');
 //template render tool - ex {{x}}  
 
 const colors = {
-    green: {
-      wrapperBackground: "#E6E1C3",
-      headerBackground: "#C1C72C",
-      headerColor: "black",
-      photoBorderColor: "#black"
-    },
-    blue: {
-      wrapperBackground: "#5F64D3",
-      headerBackground: "#26175A",
-      headerColor: "white",
-      photoBorderColor: "#73448C"
-    },
-    pink: {
-      wrapperBackground: "#879CDF",
-      headerBackground: "#FF8374",
-      headerColor: "white",
-      photoBorderColor: "#FEE24C"
-    },
-    red: {
-      wrapperBackground: "#DE9967",
-      headerBackground: "#870603",
-      headerColor: "white",
-      photoBorderColor: "white"
-    }
+    green: "https://code.getmdl.io/1.3.0/material.green-orange.min.css",
+    blue: "https://code.getmdl.io/1.3.0/material.blue-teal.min.css",
+    pink: "https://code.getmdl.io/1.3.0/material.pink-deep_purple.min.css",
+    red: "https://code.getmdl.io/1.3.0/material.red-deep_orange.min.css",
+    grey: "https://code.getmdl.io/1.3.0/material.blue_grey-indigo.min.css"
   };
 
 
@@ -35,7 +16,7 @@ const colors = {
   
   function generateHTML(data, color) {
     let user = data.login;
-    console.log("User define color: ", color);
+    console.log("User defined color: ", color);
     let html = 
     `<!DOCTYPE html>
   <html lang="en">
