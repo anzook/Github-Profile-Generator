@@ -41,12 +41,17 @@
       body {
         background-color: {{wrapperBackground}};
       }
-      .header-style {
+      .header-style, .card-header {
         background-color: {{headerBackground}};
         color: {{headerColor}};
       }
       .bio-style {
         background-color: {{photoBorderColor}};
+      }
+      .img-thumbnail {
+        border-color: {{photoBorderColor}};
+        padding: 7px;
+        margin-right: 20px;
       }
      
       /* target values:
@@ -72,25 +77,29 @@
   <body>
     <div class="container">
       <!-- Header -->
-      <nav class="navbar navbar-light header-style ">
+      <div class="navbar-light header-style ">
         <span class="text-white mb-0 h3"
-          ><i class="fas fa-users"></i>
+          > <i class="fab fa-github"></i>
           {{name}}'s Github Profile
         </span>
-      </nav>
+      </div>
       <div class="row">
           <hr />
       </div>
       <div class="jumbotron bio-style">
-        <img src="{{avatar_url}}" class="img-thumbnail float-left" alt="{{login}}'s Github avatar">
+        <img src="{{avatar_url}}" class="mh-100 d-inline-block img-thumbnail float-left" style="width: 260px; height: 260px;" alt="{{login}}'s Github avatar">
         <h1 class="display-4">{{name}}</h1>
-        <p class="lead">{{bio}}</p>
-        <p>        
-            
+        <h3 class="lead"> -   {{bio}}</h3>
+        <h3><i class="fab fa-github"></i>
           <a class="btn btn-secondary btn-lg" href="{{html_url}}" role="button">Profile</a>
+          {{#if email}}
+          <i class="fas fa-envelope"></i>
           <a class="btn btn-secondary btn-lg" href="mailto:{{ email }}" role="button">{{ email }}</a>
-          <a class="btn btn-secondary btn-lg" href="{{blog}}" role="button">{{ blog }}</a>
-        </p>
+          {{/if}}
+          {{#if blog}}
+          <a class="btn btn-secondary btn-lg" href="{{blog}}" role="button"> Blog </a>
+          {{/if}}
+        </h3>
       
         <a class="btn btn-primary btn-lg" href="https://www.google.com/maps/search/?api=1&query={{ location }}" role="button">{{ location }}</a>
       </div>
@@ -99,20 +108,20 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header bg-secondary text-white h5">
-              <i class="fas fa-user-tie"></i> GitHub Stats
+               GitHub Stats
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                <i class="fas fa-door-open"></i> {{ public_repos }} Public Repos 
-                <span class="badge badge-pill badge-warning">{{stars}} stars</span>
+                <i class="fas fa-file-code"></i> {{ public_repos }} Public Repos 
+                <span class="badge badge-pill badge-warning">{{stars}} <i class="fas fa-star"></i></span>
                 
               </li>
               <li class="list-group-item">
-                <i class="fas fa-id-card-alt"></i> Following {{ following }}
+                <i class="fas fa-user-plus"></i> Following {{ following }}
               </li>
-              <li class="list-group-item"><i class="fas fa-inbox"></i> {{ followers }} Followers</li>
+              <li class="list-group-item"><i class="fas fa-users"></i> {{ followers }} Followers</li>
               <li class="list-group-item">
-                <i class="fas fa-door-open"></i>Updated: {{updated_at}}
+                <i class="fas fa-history"></i> Updated: {{updated_at}}
               </li>
               
             
@@ -120,7 +129,6 @@
           </div>
         </div>
       </div>
-      <hr />
 
       <!-- Footer  -->
       <footer class="footer">

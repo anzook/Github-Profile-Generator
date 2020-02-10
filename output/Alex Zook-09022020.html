@@ -39,14 +39,20 @@
 
     <style>
       body {
-        background-color: #E6E1C3;
+        background-color: #879CDF;
       }
-      .header-style {
-        background-color: #C1C72C;
-        color: black;
+      .header-style, .card-header {
+        background-color: #FF8374;
+        color: white;
       }
       .bio-style {
-        background-color: #black;
+        background-color: #FEE24C;
+      }
+      .img-thumbnail {
+        border-color: #FEE24C;
+        padding: 5
+        px;
+        margin: 15px;
       }
      
       /* target values:
@@ -72,26 +78,23 @@
   <body>
     <div class="container">
       <!-- Header -->
-      <nav class="navbar navbar-light header-style ">
+      <div class="navbar-light header-style ">
         <span class="text-white mb-0 h3"
-          ><i class="fas fa-users"></i>
+          > <i class="fab fa-github"></i>
           Alex Zook's Github Profile
         </span>
-      </nav>
+      </div>
       <div class="row">
           <hr />
       </div>
       <div class="jumbotron bio-style">
-        <img src="https://avatars0.githubusercontent.com/u/56008225?v&#x3D;4" class="img-thumbnail float-left" alt="anzook's Github avatar">
+        <img src="https://avatars0.githubusercontent.com/u/56008225?v&#x3D;4" class="mh-100 d-inline-block img-thumbnail float-left" style="width: 260px; height: 260px;" alt="anzook's Github avatar">
         <h1 class="display-4">Alex Zook</h1>
-        <p class="lead">Learning more by the day...</p>
-        <hr class="my-4">
-        <p>        
-            
+        <h3 class="lead"> -   Learning more by the day...</h3>
+        <h3><i class="fab fa-github"></i>
           <a class="btn btn-secondary btn-lg" href="https://github.com/anzook" role="button">Profile</a>
-          <a class="btn btn-secondary btn-lg" href="mailto:" role="button"></a>
-          <a class="btn btn-secondary btn-lg" href="alexnzook@gmail.com" role="button">alexnzook@gmail.com</a>
-        </p>
+          <a class="btn btn-secondary btn-lg" href="alexnzook@gmail.com" role="button"> Blog </a>
+        </h3>
       
         <a class="btn btn-primary btn-lg" href="https://www.google.com/maps/search/?api=1&query=Baltimore, MD" role="button">Baltimore, MD</a>
       </div>
@@ -100,20 +103,20 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header bg-secondary text-white h5">
-              <i class="fas fa-user-tie"></i> GitHub Stats
+               GitHub Stats
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                <i class="fas fa-door-open"></i> 21 Public Repos 
-                <span class="badge badge-pill badge-warning">7 stars</span>
+                <i class="fas fa-file-code"></i> 21 Public Repos 
+                <span class="badge badge-pill badge-warning">7 <i class="fas fa-star"></i></span>
                 
               </li>
               <li class="list-group-item">
-                <i class="fas fa-id-card-alt"></i> Following 12
+                <i class="fas fa-user-plus"></i> Following 12
               </li>
-              <li class="list-group-item"><i class="fas fa-inbox"></i> 10 Followers</li>
+              <li class="list-group-item"><i class="fas fa-users"></i> 10 Followers</li>
               <li class="list-group-item">
-                <i class="fas fa-door-open"></i>Updated: 2020-02-08T14:12:02Z
+                <i class="fas fa-history"></i> Updated: 2020-02-08T14:12:02Z
               </li>
               
             

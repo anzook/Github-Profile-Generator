@@ -85,7 +85,7 @@ function getDate() {
         // width: '1230px',
         headerTemplate: "<p></p>",
         footerTemplate: "<p></p>",
-        displayHeaderFooter: false,
+        displayHeaderFooter: true,
         margin: {
           top: "10px",
           bottom: "30px"
