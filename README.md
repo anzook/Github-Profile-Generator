@@ -15,7 +15,7 @@ The format for the constructors was set by the given test conditions, listed in 
 Download the repo.
 
 Install the node dependencies:
-`npm instal`
+`npm install`
 * inquirer _for cli interface_
 * jest _for testing constructors_
 
