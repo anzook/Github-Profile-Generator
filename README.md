@@ -1,14 +1,13 @@
 # Github-Profile-Generator
 ### A basic node app to create a pdf from a github portfolio
 
-This is a basic cli-app using node to construct an engineering team profile as an html file. Additionally, it is a way to practice test-driven development.
+This is a basic cli-app using node to construct an engineer's GitHub profile as an html and pdf file. Additionally, it is a way for me to get basic experience with Puppeteer and Chromium, as well as using Hnadlebars for templating. 
 
 # Design Notes
 
 Inputs and Outputs -
-The app prompts the user to build an engineering team, which consists of a manager, and any number of engineers and interns. Then the app generates a team.html page in the output directory with the team roster.
+The app prompts the user for a GirHun username and a color pallet. Then the app generates both a pdf and an html report in the output directory with the users's GitHub info nicely fomratted.
 
-The format for the constructors was set by the given test conditions, listed in the /test folder. Each employee has a name, id, title, and a special property given the role.
 
 ## Viewing and using the website
 
@@ -16,19 +15,17 @@ Download the repo.
 
 Install the node dependencies:
 `npm install`
-* inquirer _for cli interface_
-* jest _for testing constructors_
+* puppeteer _for mocking output and pdf printing_
+* inquirer _for CLI interface
+* handlebars _for templating_
+* octonode _for GirHub API_
+* html-pdf _deprecated, but left in for experiementation. Original option for pdf generation_
 
  and then initalize the app by running:
 `node app.js`
 
-Here is an example of the html formatted output created as /output/team.html:
-![Mainpage Screenshot Demo](/assets/Team_Profile_Demo.png)
-
-
-The 'High Scores' button toggles the display card of scores.
-
-All website assets are contained within the repo (https://github.com/anzook/Engineering-Team-Profile)
+Here is an example of the formatted output created as /output/[name-date].[fileType]:
+![Mainpage Screenshot Demo](https://github.com/anzook/Github-Profile-Generator/blob/master/output/OutputExample.jpg)
 
 
 ## Acknowledgements and Credits
