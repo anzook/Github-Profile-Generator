@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/anzook/Github-Profile-Generator#readme",
   "dependencies": {
-    "handlebars": "^4.7.2",
+    "handlebars": "^4.7.7",
     "html-pdf": "^2.2.0",
     "inquirer": "^7.0.1",
     "octonode": "^0.9.5",
